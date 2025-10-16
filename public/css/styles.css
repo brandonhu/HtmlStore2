@@ -1,0 +1,41 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#10b981; /* green */
+  --nav:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial;margin:0;background:var(--bg);color:#0f172a}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--nav);box-shadow:0 2px 6px rgba(15,23,42,0.06);position:sticky;top:0;z-index:20}
+.brand{font-weight:700;color:#0f172a;text-decoration:none;margin-right:20px;font-size:1.15rem}
+.tabs{display:flex;gap:8px}
+.tab{padding:8px 12px;border-radius:8px;color:#334155;text-decoration:none}
+.tab.active{background:var(--accent);color:white}
+.nav-right{display:flex;align-items:center;gap:12px}
+.btn{border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn.primary{background:var(--accent);color:white}
+.btn.logout{background:#efefef}
+.welcome{color:#334155}
+.container{max-width:1100px;margin:28px auto;padding:0 20px}
+.login-hero{display:flex;align-items:center;justify-content:center;height:70vh}
+.login-card{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 30px rgba(15,23,42,0.08);width:100%;max-width:420px;text-align:center}
+.login-card h1{margin:0 0 6px}
+.muted{color:var(--muted)}
+.login-form{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.login-form label{display:flex;flex-direction:column;text-align:left;font-size:0.9rem;color:#334155}
+.login-form input{padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-top:6px}
+.error{background:#fee2e2;color:#b91c1c;padding:8px;border-radius:8px;margin-top:8px}
+.hero{background:linear-gradient(90deg,rgba(16,185,129,0.06),transparent);padding:32px;border-radius:12px}
+.lead{color:var(--muted);margin-top:6px}
+.content-cards{display:flex;gap:16px;margin-top:18px}
+.card{background:var(--card);padding:16px;border-radius:10px;flex:1;box-shadow:0 4px 18px rgba(15,23,42,0.04)}
+.products h2{margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.grid-item{background:var(--card);padding:8px;border-radius:8px;display:flex;align-items:center;justify-content:center;min-height:140px}
+.grid-item img{max-width:100%;max-height:220px;object-fit:contain;border-radius:6px}
+
+@media (max-width:700px){
+  .content-cards{flex-direction:column}
+  .navbar{padding:10px}
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Store - <%= title || '' %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <a class="brand" href="/home">Store</a>
+        <nav class="tabs">
+          <a href="/home" class="tab <%= active === 'home' ? 'active' : '' %>">Home</a>
+          <a href="/products" class="tab <%= active === 'products' ? 'active' : '' %>">Products</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <% if (user) { %>
+          <span class="welcome">Hi, <%= user.name %></span>
+          <form method="post" action="/logout" class="logout-form">
+            <button type="submit" class="btn logout">Logout</button>
+          </form>
+        <% } %>
+      </div>
+    </header>
+
+    <main class="container">

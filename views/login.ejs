@@ -1,0 +1,25 @@
+<%- include('partials/header', { title: 'Login', active: '', user: null }) %>
+
+  <section class="login-hero">
+    <div class="login-card">
+      <h1>Welcome to Store</h1>
+      <p class="muted">Please sign in to continue</p>
+      <% if (error) { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+
+      <form id="loginForm" method="post" action="/login" class="login-form">
+        <label>Email
+          <input type="email" name="email" required placeholder="user@company.com" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required placeholder="Password" />
+        </label>
+        <div class="actions">
+          <button class="btn primary" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<%- include('partials/footer') %>

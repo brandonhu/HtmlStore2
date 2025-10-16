@@ -1,0 +1,18 @@
+<%- include('partials/header', { title: 'Products', active: active || 'products', user: user }) %>
+
+  <section class="products">
+    <h2>Products</h2>
+    <% if (!images || images.length === 0) { %>
+      <p class="muted">No products found. Add images to the <code>public/images</code> folder.</p>
+    <% } else { %>
+      <div class="grid">
+        <% images.forEach(function(img){ %>
+          <div class="grid-item">
+            <img src="/images/<%= img %>" alt="Product" />
+          </div>
+        <% }); %>
+      </div>
+    <% } %>
+  </section>
+
+<%- include('partials/footer') %>

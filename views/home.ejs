@@ -1,0 +1,21 @@
+<%- include('partials/header', { title: 'Home', active: active || 'home', user: user }) %>
+
+  <section class="home">
+    <div class="hero">
+      <h2>Welcome back, <%= user.name %>!</h2>
+      <p class="lead">Explore products and manage your shopping experience.</p>
+    </div>
+
+    <div class="content-cards">
+      <div class="card">
+        <h3>Professional Design</h3>
+        <p>Our Store is built with a clean and responsive design to give you a pleasant experience.</p>
+      </div>
+      <div class="card">
+        <h3>Quick Access</h3>
+        <p>Use the Products tab to browse all available items.</p>
+      </div>
+    </div>
+  </section>
+
+<%- include('partials/footer') %>
